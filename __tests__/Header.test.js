@@ -8,10 +8,13 @@ import Header from '../components/Header';
 
 describe('<Header />', () => {
 
-    /**
-     * TODO
-     */
-    it('will fail', () => {
-        expect(false).toBe(true)
+    it('Title tag', () => {
+      const wrapper = shallow(<Header />);
+      expect(wrapper.find('title').text()).toBe('Estimeo Highlights')
+    })
+
+    it('Style tag count', () => {
+      const wrapper = shallow(<Header />);
+      expect(wrapper.find('style').length).toBe(1)
     })
 })
